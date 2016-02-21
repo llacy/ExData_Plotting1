@@ -9,3 +9,6 @@ datetime <- paste(as.Date(Feb_data$Date), Feb_data$Time)
 Feb_data$datetime <- as.POSIXct(datetime)
 plot(Feb_data$Global_active_power~Feb_data$datetime, type = "l"
      , xlab = "", ylab = "Global Active Power (kilowatts)")
+##copy to PNG
+dev.copy(png, "Plot2.png", height = 480, width = 480)
+dev.off()
